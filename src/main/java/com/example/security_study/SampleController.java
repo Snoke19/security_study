@@ -13,11 +13,11 @@ public class SampleController {
 
   @GetMapping("/admin")
   public String getMessageAdmin() {
-    return "<h1>Welcome ADMIN<h1>";
+    return "<h1>Welcome admin<h1>";
   }
 
-  @GetMapping("/role")
+  @GetMapping("/user")
   public String getMessageRole() {
-    return "<h1>Welcome ROLE<h1>";
+    return "<h1>Welcome User<h1>";
   }
 }
