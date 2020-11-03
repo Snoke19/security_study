@@ -8,17 +8,16 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @ToString
 public class CustomUserDetails implements UserDetails {
 
-  private String userName;
-  private String password;
-  private boolean active;
-  private List<GrantedAuthority> authorities;
+  private final String userName;
+  private final String password;
+  private final boolean active;
+  private final List<GrantedAuthority> authorities;
 
   public CustomUserDetails(User user) {
     this.userName = user.getUserName();

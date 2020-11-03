@@ -24,8 +24,6 @@ public class CustomUserDetailsService implements UserDetailsService {
 
     user.orElseThrow(() -> new UsernameNotFoundException("Not found: " + s));
 
-    System.out.println("-----------------------------------" + user.map(CustomUserDetails::new).get().toString());
-
     return user.map(CustomUserDetails::new).get();
   }
 }
